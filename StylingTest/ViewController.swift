@@ -11,10 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var randomView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        randomView.layer.setShadowAndCornerRadius(cornerRadius: 10,
+                                                  shadowColor: .darkGray,
+                                                  shadowOffset: CGSize(width: 1, height: 3),
+                                                  shadowOpacity: 1)
     }
 }
 
