@@ -14,7 +14,7 @@ enum CustomizationOptions: String {
     case styleName
 }
 
-// Define the styles you would like to use here
+// Define the style names you would like to use here
 enum Styles: String {
     case Header1
     case Header2

@@ -14,6 +14,18 @@ import UIKit
 
 extension UIView: Stylable, BackgroundStylable {
     
+    @IBInspectable var styleName: String? {
+        get {
+            return self.styleName
+        }
+        
+        set {
+            if let name = newValue {
+                self.style(with: name)
+            }
+        }
+    }
+    
     // Intercepting User defined runtime properties
     open override func setValue(_ value: Any?, forUndefinedKey key: String) {
         if let value = value as? String {
@@ -38,7 +50,7 @@ extension UIView: Stylable, BackgroundStylable {
     /// - Parameter name: the style name as defined in the Styles enums rawValue
     @objc func style(with name: String) {
         guard let style = Styles(rawValue: name) else {
-            print("No style found named: \(name)")
+            print("WARNING: No style found named: \(name)")
             return
         }
         
@@ -75,7 +87,7 @@ extension UIView: Stylable, BackgroundStylable {
     /// When setting a corner radius we need to set clipsToBound to true
     /// otherwise the corner radius will not be visible
     ///
-    /// Setting both shadow and corner radius will not work on UILabels, ...
+    /// WARNING: Setting both shadow and corner radius will not work on UILabels, ...
     /// - Parameters:
     ///   - color: The background color for this view
     ///   - borderColor: The border color for this view

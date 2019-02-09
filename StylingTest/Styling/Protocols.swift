@@ -11,12 +11,20 @@ import UIKit
 
 // Methods needed to style UIKit components
 protocol Stylable {
+    var styleName: String? { get set }
     func style(with name: String)
     func setValue(_ value: Any?, forUndefinedKey key: String)
 }
 
 protocol TextStylable {
     func styleText(font: UIFont, textColor: UIColor, allignment: NSTextAlignment, isUppercased: Bool)
+}
+
+protocol PlaceholderStylable {
+    func stylePlaceholderText(font: UIFont,
+                              textColor: UIColor,
+                              allignment: NSTextAlignment,
+                              isUppercased: Bool)
 }
 
 protocol BackgroundStylable {
@@ -29,4 +37,3 @@ protocol BackgroundStylable {
                          shadowOpacity: Float?,
                          clipsToBounds: Bool)
 }
-

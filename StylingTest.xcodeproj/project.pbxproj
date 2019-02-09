@@ -18,6 +18,7 @@
 		C4456D41220CDC9300F18DB4 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D40220CDC9300F18DB4 /* TextStyle.swift */; };
 		C4456D43220CDE1000F18DB4 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D42220CDE1000F18DB4 /* Styles.swift */; };
 		C4456D45220CDEB800F18DB4 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D44220CDEB800F18DB4 /* Style.swift */; };
+		C4456D4C220F1B0500F18DB4 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D4B220F1B0500F18DB4 /* UITextField.swift */; };
 		C47BF01E220D7F38003E9B0F /* UIColors+UIFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BF01D220D7F38003E9B0F /* UIColors+UIFonts.swift */; };
 		C483DF08220DB80A0087D636 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483DF07220DB80A0087D636 /* CALayer+Shadow.swift */; };
 		C4B8A336220D907E00793B77 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A335220D907E00793B77 /* Models.swift */; };
@@ -38,6 +39,7 @@
 		C4456D40220CDC9300F18DB4 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
 		C4456D42220CDE1000F18DB4 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		C4456D44220CDEB800F18DB4 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		C4456D4B220F1B0500F18DB4 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		C47BF01D220D7F38003E9B0F /* UIColors+UIFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+UIFonts.swift"; sourceTree = "<group>"; };
 		C483DF07220DB80A0087D636 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
 		C4B8A335220D907E00793B77 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				C42717C6220DC1DD003B555A /* UIView.swift */,
 				C4456D3A220CCFA200F18DB4 /* UILabel.swift */,
 				C42717C8220DD446003B555A /* UIButton.swift */,
+				C4456D4B220F1B0500F18DB4 /* UITextField.swift */,
 			);
 			path = UIKitComponents;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				C42717C7220DC1DD003B555A /* UIView.swift in Sources */,
 				C4456D43220CDE1000F18DB4 /* Styles.swift in Sources */,
 				C4B8A338220D909500793B77 /* Protocols.swift in Sources */,
+				C4456D4C220F1B0500F18DB4 /* UITextField.swift in Sources */,
 				C4B8A336220D907E00793B77 /* Models.swift in Sources */,
 				C4456D3B220CCFA200F18DB4 /* UILabel.swift in Sources */,
 				C4456D29220CCF4100F18DB4 /* AppDelegate.swift in Sources */,
@@ -371,7 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CYUN49XUZ7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = StylingTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -389,7 +393,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CYUN49XUZ7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = StylingTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

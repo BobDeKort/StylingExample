@@ -97,17 +97,44 @@
                                     <constraint firstAttribute="width" constant="200" id="TVy-xB-5KN"/>
                                 </constraints>
                             </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qxb-Bs-gxl">
+                                <rect key="frame" x="20" y="475.5" width="335" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49w-vA-ICp">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="Header1"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Test" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vrW-e5-e5U">
+                                        <rect key="frame" x="0.0" y="40" width="335" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="Header2"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yHa-zy-ZIZ" secondAttribute="trailing" constant="50" id="267-P9-7sb"/>
+                            <constraint firstItem="Qxb-Bs-gxl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3N6-GO-bwu"/>
                             <constraint firstItem="jZs-Vk-EJl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="6Di-br-W3F"/>
+                            <constraint firstItem="Qxb-Bs-gxl" firstAttribute="top" secondItem="pVS-gH-eT0" secondAttribute="bottom" constant="20" id="8fx-tI-gEy"/>
                             <constraint firstItem="yHa-zy-ZIZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9kH-Rp-B2u"/>
+                            <constraint firstItem="Qxb-Bs-gxl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FbH-fg-7Qv"/>
                             <constraint firstItem="jZs-Vk-EJl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ix4-M6-LE8"/>
                             <constraint firstItem="pVS-gH-eT0" firstAttribute="top" secondItem="yHa-zy-ZIZ" secondAttribute="bottom" constant="20" id="K0p-jV-OhL"/>
                             <constraint firstItem="jZs-Vk-EJl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="LzU-bP-o7W"/>
                             <constraint firstItem="yHa-zy-ZIZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="OP6-ej-Bre"/>
                             <constraint firstItem="zfc-gV-CNw" firstAttribute="top" secondItem="jZs-Vk-EJl" secondAttribute="bottom" constant="20" id="Q0I-X8-hcg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qxb-Bs-gxl" secondAttribute="trailing" constant="20" id="QBu-u9-sY6"/>
                             <constraint firstItem="yHa-zy-ZIZ" firstAttribute="top" secondItem="zfc-gV-CNw" secondAttribute="bottom" constant="20" id="ets-Iz-Feh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jZs-Vk-EJl" secondAttribute="trailing" constant="26" id="nhu-XP-ihy"/>
                             <constraint firstItem="pVS-gH-eT0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vxh-1g-hRw"/>

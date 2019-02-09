@@ -17,7 +17,7 @@ extension UIButton: TextStylable {
         
         // Applying specific UIlabel styling
         guard let style = Styles(rawValue: name) else {
-            print("No style found named: \(name)")
+            print("WARNING: No style found named: \(name)")
             return
         }
         
