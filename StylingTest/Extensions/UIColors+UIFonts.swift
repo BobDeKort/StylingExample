@@ -25,6 +25,18 @@ extension UIColor {
     @nonobjc class var textFieldErrorBorder: UIColor {
         return UIColor(red: 245.0 / 255.0, green: 141.0 / 255.0, blue: 153.0 / 255.0, alpha: 1.0)
     }
+    
+    @nonobjc class var textFieldBorder: UIColor {
+        return UIColor(red: 213.0 / 255.0, green: 213.0 / 255.0, blue: 213.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var textFieldbackground: UIColor {
+        return UIColor(red: 244.0 / 255.0, green: 244.0 / 255.0, blue: 244.0 / 255.0, alpha: 1.0)
+    }
+    
+    @nonobjc class var projectOrange: UIColor {
+        return UIColor(red: 246.0 / 255.0, green: 140.0 / 255.0, blue: 33.0 / 255.0, alpha: 1.0)
+    }
 }
 
 extension UIFont {

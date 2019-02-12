@@ -16,38 +16,23 @@ extension UITextField: TextStylable, PlaceholderStylable {
         super.style(with: name)
         
         // Applying specific UITextField styling
-        guard let style = Styles(rawValue: name) else {
+        guard let style = Styles(rawValue: name)?.style else {
             print("WARNING: No style found named: \(name)")
             return
         }
         
-        switch style {
-        case .Header1:
-            self.styleText(font: .systemLarge,
-                           textColor: .black,
-                           allignment: .center,
-                           isUppercased: true)
-            self.stylePlaceholderText(font: .systemLarge,
-                                      textColor: .marine,
-                                      allignment: .center,
-                                      isUppercased: true)
-        case .Header2:
-            self.styleText(font: .systemMedium,
-                           textColor: .red,
-                           allignment: .right,
-                           isUppercased: false)
-            self.stylePlaceholderText(font: .systemMedium,
-                                      textColor: .orange,
-                                      allignment: .right,
-                                      isUppercased: false)
-        case .Header3:
-            self.styleText(font: .systemSmall,
-                           textColor: .purple)
-        case .AlertText:
-            self.styleText(font: .systemSmall,
-                           textColor: .red,
-                           allignment: .left,
-                           isUppercased: true)
+        if style.isTextStylable {
+            self.styleText(font: style.font,
+                           textColor: style.textColor,
+                           allignment: style.allignment,
+                           isUppercased: style.isUppercased)
+        }
+        
+        if style.isPlaceholderStylable {
+            self.stylePlaceholderText(font: style.placeholderFont,
+                                      textColor: style.placeeholderTextColor,
+                                      allignment: style.placeholderTextAllignment,
+                                      isUppercased: style.placeholderIsUppercased)
         }
     }
     
@@ -58,16 +43,18 @@ extension UITextField: TextStylable, PlaceholderStylable {
     ///   - textColor: The color you want this text field inputted text to appear in
     ///   - allignment: The allignment to position the text in this text field
     ///   - isUppercased: Sets the current text in the text field to uppercase if true
-    func styleText(font: UIFont,
-                   textColor: UIColor,
-                   allignment: NSTextAlignment = .left,
-                   isUppercased: Bool = false)
+    func styleText(font: UIFont?,
+                   textColor: UIColor?,
+                   allignment: NSTextAlignment? = .left,
+                   isUppercased: Bool? = false)
     {
         self.font = font
         self.textColor = textColor
-        self.textAlignment = allignment
+        if let allignment = allignment {
+            self.textAlignment = allignment
+        }
         
-        if isUppercased {
+        if let isUppercased = isUppercased, isUppercased {
             self.text = self.text?.uppercased()
         }
     }
@@ -80,26 +67,37 @@ extension UITextField: TextStylable, PlaceholderStylable {
     ///   - allignment: The allignment to position the text in this text field
     ///   - isUppercased: Sets the current placeholder text in the text field to
     /// uppercase if true
-    func stylePlaceholderText(font: UIFont,
-                              textColor: UIColor,
-                              allignment: NSTextAlignment = .left,
-                              isUppercased: Bool = false)
+    func stylePlaceholderText(font: UIFont?,
+                              textColor: UIColor?,
+                              allignment: NSTextAlignment? = .left,
+                              isUppercased: Bool? = false)
     {
         guard var placeholder = self.placeholder else {
             print("WARNING: Can not style placeholder if the is no placeholder text set")
             return
         }
         
-        if isUppercased {
+        if let isUppercased = isUppercased, isUppercased {
             placeholder = placeholder.uppercased()
+        }
+        
+        if let allignment = allignment {
+            self.textAlignment = allignment
+        }
+        
+        // Constructing attributes
+        var attributes: [NSAttributedString.Key : Any] = [:]
+        
+        if let font = font {
+            attributes[NSAttributedString.Key.font] = font
+        }
+        
+        if let textColor = textColor {
+            attributes[NSAttributedString.Key.foregroundColor] = textColor
         }
         
         self.attributedPlaceholder = NSAttributedString(
             string: placeholder,
-            attributes: [NSAttributedString.Key.font : font,
-                         NSAttributedString.Key.foregroundColor: textColor]
-        )
-        
-        self.textAlignment = allignment
+            attributes: attributes)
     }
 }

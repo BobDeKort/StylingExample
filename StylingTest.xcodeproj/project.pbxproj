@@ -15,9 +15,6 @@
 		C4456D30220CCF4200F18DB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4456D2F220CCF4200F18DB4 /* Assets.xcassets */; };
 		C4456D33220CCF4200F18DB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4456D31220CCF4200F18DB4 /* LaunchScreen.storyboard */; };
 		C4456D3B220CCFA200F18DB4 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D3A220CCFA200F18DB4 /* UILabel.swift */; };
-		C4456D41220CDC9300F18DB4 /* TextStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D40220CDC9300F18DB4 /* TextStyle.swift */; };
-		C4456D43220CDE1000F18DB4 /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D42220CDE1000F18DB4 /* Styles.swift */; };
-		C4456D45220CDEB800F18DB4 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D44220CDEB800F18DB4 /* Style.swift */; };
 		C4456D4C220F1B0500F18DB4 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D4B220F1B0500F18DB4 /* UITextField.swift */; };
 		C47BF01E220D7F38003E9B0F /* UIColors+UIFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BF01D220D7F38003E9B0F /* UIColors+UIFonts.swift */; };
 		C483DF08220DB80A0087D636 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483DF07220DB80A0087D636 /* CALayer+Shadow.swift */; };
@@ -36,9 +33,6 @@
 		C4456D32220CCF4200F18DB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4456D34220CCF4200F18DB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4456D3A220CCFA200F18DB4 /* UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UILabel.swift; sourceTree = "<group>"; };
-		C4456D40220CDC9300F18DB4 /* TextStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextStyle.swift; sourceTree = "<group>"; };
-		C4456D42220CDE1000F18DB4 /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
-		C4456D44220CDEB800F18DB4 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		C4456D4B220F1B0500F18DB4 /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		C47BF01D220D7F38003E9B0F /* UIColors+UIFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+UIFonts.swift"; sourceTree = "<group>"; };
 		C483DF07220DB80A0087D636 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
@@ -81,38 +75,11 @@
 				C4456D2C220CCF4100F18DB4 /* Main.storyboard */,
 				C4B8A334220D8F8200793B77 /* Styling */,
 				C483DF06220DB7970087D636 /* Extensions */,
-				C4456D3E220CDC4B00F18DB4 /* Stylable */,
 				C4456D2F220CCF4200F18DB4 /* Assets.xcassets */,
 				C4456D31220CCF4200F18DB4 /* LaunchScreen.storyboard */,
 				C4456D34220CCF4200F18DB4 /* Info.plist */,
 			);
 			path = StylingTest;
-			sourceTree = "<group>";
-		};
-		C4456D3E220CDC4B00F18DB4 /* Stylable */ = {
-			isa = PBXGroup;
-			children = (
-				C4456D42220CDE1000F18DB4 /* Styles.swift */,
-				C4456D46220CDEC400F18DB4 /* Models */,
-				C4456D3F220CDC6A00F18DB4 /* UIKitComponents */,
-			);
-			path = Stylable;
-			sourceTree = "<group>";
-		};
-		C4456D3F220CDC6A00F18DB4 /* UIKitComponents */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = UIKitComponents;
-			sourceTree = "<group>";
-		};
-		C4456D46220CDEC400F18DB4 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				C4456D44220CDEB800F18DB4 /* Style.swift */,
-				C4456D40220CDC9300F18DB4 /* TextStyle.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		C483DF06220DB7970087D636 /* Extensions */ = {
@@ -217,16 +184,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4456D2B220CCF4100F18DB4 /* ViewController.swift in Sources */,
-				C4456D45220CDEB800F18DB4 /* Style.swift in Sources */,
 				C42717C7220DC1DD003B555A /* UIView.swift in Sources */,
-				C4456D43220CDE1000F18DB4 /* Styles.swift in Sources */,
 				C4B8A338220D909500793B77 /* Protocols.swift in Sources */,
 				C4456D4C220F1B0500F18DB4 /* UITextField.swift in Sources */,
 				C4B8A336220D907E00793B77 /* Models.swift in Sources */,
 				C4456D3B220CCFA200F18DB4 /* UILabel.swift in Sources */,
 				C4456D29220CCF4100F18DB4 /* AppDelegate.swift in Sources */,
 				C483DF08220DB80A0087D636 /* CALayer+Shadow.swift in Sources */,
-				C4456D41220CDC9300F18DB4 /* TextStyle.swift in Sources */,
 				C47BF01E220D7F38003E9B0F /* UIColors+UIFonts.swift in Sources */,
 				C42717C9220DD446003B555A /* UIButton.swift in Sources */,
 			);

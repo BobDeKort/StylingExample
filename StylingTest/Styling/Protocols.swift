@@ -11,29 +11,38 @@ import UIKit
 
 // Methods needed to style UIKit components
 protocol Stylable {
+    // Properties
     var styleName: String? { get set }
+    
+    // Methods
     func style(with name: String)
-    func setValue(_ value: Any?, forUndefinedKey key: String)
+    func style(with style: Styles)
 }
 
 protocol TextStylable {
-    func styleText(font: UIFont, textColor: UIColor, allignment: NSTextAlignment, isUppercased: Bool)
+    // Methods
+    func styleText(font: UIFont?,
+                   textColor: UIColor?,
+                   allignment: NSTextAlignment?,
+                   isUppercased: Bool?)
 }
 
 protocol PlaceholderStylable {
-    func stylePlaceholderText(font: UIFont,
-                              textColor: UIColor,
-                              allignment: NSTextAlignment,
-                              isUppercased: Bool)
+    // Methods
+    func stylePlaceholderText(font: UIFont?,
+                              textColor: UIColor?,
+                              allignment: NSTextAlignment?,
+                              isUppercased: Bool?)
 }
 
 protocol BackgroundStylable {
-    func styleBackground(backgroundColor: UIColor,
+    // Methods
+    func styleBackground(backgroundColor: UIColor?,
                          borderColor: UIColor?,
                          borderWidth: CGFloat?,
                          cornerRadius: RoundingStyle,
                          shadowColor: UIColor?,
                          shadowOffset: CGSize?,
                          shadowOpacity: Float?,
-                         clipsToBounds: Bool)
+                         clipsToBounds: Bool?)
 }

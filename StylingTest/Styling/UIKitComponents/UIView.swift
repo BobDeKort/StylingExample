@@ -9,11 +9,15 @@
 import Foundation
 import UIKit
 
-// TODO: Checkout Text field and text view
-// TODO: See how much we could style a collection view/ layout
+// List of thing to improve or add
+// TODO: Add translation keys as IBInspectable on Labels
+// TODO: Checkout Text View posibilities
+// TODO: See how much we could style a collection view/ layout or tableview
+// ...
 
 extension UIView: Stylable, BackgroundStylable {
     
+    /// IBInspectable to access styling from the Interface builder
     @IBInspectable var styleName: String? {
         get {
             return self.styleName
@@ -26,59 +30,32 @@ extension UIView: Stylable, BackgroundStylable {
         }
     }
     
-    // Intercepting User defined runtime properties
-    open override func setValue(_ value: Any?, forUndefinedKey key: String) {
-        if let value = value as? String {
-            switch key {
-            case CustomizationOptions.styleName.rawValue:
-                style(with: value)
-            case CustomizationOptions.translatedText.rawValue:
-                setTranslatedText(with: value)
-                break
-            default:
-                super.setValue(value, forUndefinedKey: key)
-            }
-        } else {
-            super.setValue(value, forUndefinedKey: key)
-        }
-    }
-    
     /// Function to start styling this view by giving a style name.
     /// Override this function in new UIKit components to apply the different types
     /// of styles
     ///
     /// - Parameter name: the style name as defined in the Styles enums rawValue
     @objc func style(with name: String) {
-        guard let style = Styles(rawValue: name) else {
+        guard let style = Styles(rawValue: name)?.style else {
             print("WARNING: No style found named: \(name)")
             return
         }
         
-        switch style {
-        // TODO: Add styling here
-        case .Header1:
-            self.styleBackground(backgroundColor: .green,
-                                 borderColor: .red,
-                                 borderWidth: 5,
-                                 cornerRadius: .roundedSideHorizontal)
-        case .Header2:
-            self.styleBackground(backgroundColor: .gray,
-                                 borderColor: .blue,
-                                 borderWidth: 2,
-                                 shadowColor: .darkGray,
-                                 shadowOffset: CGSize(width: 1, height: 3),
-                                 shadowOpacity: 1)
-        case .Header3:
-            self.styleBackground(backgroundColor: .purple,
-                                 borderColor: nil,
-                                 borderWidth: nil,
-                                 cornerRadius: .circle)
-        case .AlertText:
-            self.styleBackground(backgroundColor: .textFieldErrorBackground,
-                                 borderColor: .textFieldErrorBorder,
-                                 borderWidth: 2,
-                                 cornerRadius: .value(20))
+        if style.isStylable {
+            self.styleBackground(backgroundColor: style.backgroundColor,
+                                 borderColor: style.borderColor,
+                                 borderWidth: style.borderWidth,
+                                 cornerRadius: style.cornerRadius,
+                                 shadowColor: style.shadowColor,
+                                 shadowOffset: style.shadowOffset,
+                                 shadowOpacity: style.shadowOpacity,
+                                 clipsToBounds: style.clipsToBounds)
         }
+    }
+    
+    /// Convenience method to use for developers
+    func style(with style: Styles) {
+        self.style(with: style.rawValue)
     }
     
     /// Function to style this views background and border
@@ -87,24 +64,21 @@ extension UIView: Stylable, BackgroundStylable {
     /// When setting a corner radius we need to set clipsToBound to true
     /// otherwise the corner radius will not be visible
     ///
-    /// WARNING: Setting both shadow and corner radius will not work on UILabels, ...
-    /// - Parameters:
-    ///   - color: The background color for this view
-    ///   - borderColor: The border color for this view
-    ///   - borderWidth: The border width for this view
-    ///   - clipsToBounds: Set the clipsToBounds property of this view
-    func styleBackground(backgroundColor: UIColor,
+    /// WARNING: Setting both shadow and corner radius will only work on standard UIView
+    func styleBackground(backgroundColor: UIColor?,
                          borderColor: UIColor?,
                          borderWidth: CGFloat?,
                          cornerRadius: RoundingStyle = .none,
                          shadowColor: UIColor? = nil,
                          shadowOffset: CGSize? = nil,
                          shadowOpacity: Float? = nil,
-                         clipsToBounds: Bool = true)
+                         clipsToBounds: Bool? = true)
     {
         // Setting user defined clips to bounds, might get overwritten when setting corner radius
         // or shadow
-        self.clipsToBounds = clipsToBounds
+        if let clipsToBounds = clipsToBounds {
+            self.clipsToBounds = clipsToBounds
+        }
         
         // Set background color
         self.backgroundColor = backgroundColor
@@ -155,11 +129,5 @@ extension UIView: Stylable, BackgroundStylable {
             self.layer.shadowOffset = shadowOffset
             self.layer.shadowOpacity = shadowOpacity
         }
-    }
-    
-    // MARK: - Translations -
-    
-    private func setTranslatedText(with key: String) {
-        print("Setting translated text with key: \(key)")
     }
 }

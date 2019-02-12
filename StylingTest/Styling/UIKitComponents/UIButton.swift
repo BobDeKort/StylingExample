@@ -11,59 +11,48 @@ import UIKit
 
 extension UIButton: TextStylable {
     
+    // See UIView extension
     @objc override func style(with name: String) {
         // Applying general styling for UIView
         super.style(with: name)
         
         // Applying specific UIlabel styling
-        guard let style = Styles(rawValue: name) else {
+        guard let style = Styles(rawValue: name)?.style else {
             print("WARNING: No style found named: \(name)")
             return
         }
         
-        switch style {
-        case .Header1:
-            self.styleText(font: .systemLarge,
-                           textColor: .black,
-                           allignment: .center,
-                           isUppercased: true)
-        case .Header2:
-            self.styleText(font: .systemMedium,
-                           textColor: .red,
-                           allignment: .right,
-                           isUppercased: false)
-        case .Header3:
-            self.styleText(font: .systemSmall,
-                           textColor: .purple)
-        case .AlertText:
-            self.styleText(font: .systemSmall,
-                           textColor: .red,
-                           allignment: .left,
-                           isUppercased: true)
+        if style.isTextStylable {
+            self.styleText(font: style.font,
+                           textColor: style.textColor,
+                           allignment: style.allignment,
+                           isUppercased: style.isUppercased)
         }
     }
     
-    func styleText(font: UIFont,
-                   textColor: UIColor,
-                   allignment: NSTextAlignment = .left,
-                   isUppercased: Bool = false)
+    func styleText(font: UIFont?,
+                   textColor: UIColor?,
+                   allignment: NSTextAlignment? = .left,
+                   isUppercased: Bool? = false)
     {
         self.titleLabel?.font = font
         self.setTitleColor(textColor, for: .normal)
         
-        switch allignment {
-        case .left:
-            self.contentHorizontalAlignment = .left
-        case .center:
-            self.contentHorizontalAlignment = .center
-        case .right:
-            self.contentHorizontalAlignment = .right
-        case .natural:
-            self.contentHorizontalAlignment = .fill
-        default: break
+        if let allignment = allignment {
+            switch allignment {
+            case .left:
+                self.contentHorizontalAlignment = .left
+            case .center:
+                self.contentHorizontalAlignment = .center
+            case .right:
+                self.contentHorizontalAlignment = .right
+            case .natural:
+                self.contentHorizontalAlignment = .fill
+            default: break
+            }
         }
         
-        if isUppercased {
+        if let isUppercased = isUppercased, isUppercased {
             self.setTitle(self.titleLabel?.text?.uppercased(), for: self.state)
         }
     }

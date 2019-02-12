@@ -12,25 +12,23 @@ import UIKit
 extension UILabel: TextStylable {
     // MARK: - Styling Interface -
 
+    // See UIView extension
     @objc override func style(with name: String) {
         // Applying general styling for UIView
         super.style(with: name)
         
         // Applying specific UIlabel styling
-        guard let style = Styles(rawValue: name) else {
+        guard let style = Styles(rawValue: name)?.style else {
             print("WARNING: No style found named: \(name)")
             return
         }
         
-        switch style {
-        case .Header1:
-            self.styleText(font: .systemLarge, textColor: .marine, allignment: .left)
-        case .Header2:
-            self.styleText(font: .systemMedium, textColor: .red, isUppercased: true)
-        case .Header3:
-            self.styleText(font: .systemMedium, textColor: .green, allignment: .center)
-        case .AlertText:
-            self.styleText(font: .systemSmall, textColor: .black, allignment: .right)
+        // Checkin if style is Text stylable, background styling is handles by the above super.style
+        if style.isTextStylable {
+            self.styleText(font: style.font,
+                           textColor: style.textColor,
+                           allignment: style.allignment,
+                           isUppercased: style.isUppercased)
         }
     }
 
@@ -44,15 +42,17 @@ extension UILabel: TextStylable {
     ///   - textColor: The color you want this label's text to appear in
     ///   - allignment: The allignment to position the text in this label
     ///   - isUppercased: Sets the current text in the label to uppercase if true
-    func styleText(font: UIFont,
-                   textColor: UIColor,
-                   allignment: NSTextAlignment = .left,
-                   isUppercased: Bool = false) {
+    func styleText(font: UIFont?,
+                   textColor: UIColor?,
+                   allignment: NSTextAlignment? = .left,
+                   isUppercased: Bool? = false) {
         self.font = font
         self.textColor = textColor
-        if isUppercased {
+        if let isUppercased = isUppercased, isUppercased {
             self.text = self.text?.uppercased()
         }
-        self.textAlignment = allignment
+        if let allignment = allignment {
+            self.textAlignment = allignment
+        }
     }
 }
