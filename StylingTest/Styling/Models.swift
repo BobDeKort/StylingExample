@@ -84,7 +84,7 @@ enum Styles: String {
             // placeholder text of the component
             
             newStyle.placeholderFont = .systemLarge
-            newStyle.textColor = .lightGray
+            newStyle.placeeholderTextColor = .lightGray
             newStyle.allignment = .center
             newStyle.isUppercased = false
             

@@ -65,9 +65,9 @@ extension UIView: Stylable, BackgroundStylable {
     /// otherwise the corner radius will not be visible
     ///
     /// WARNING: Setting both shadow and corner radius will only work on standard UIView
-    func styleBackground(backgroundColor: UIColor?,
-                         borderColor: UIColor?,
-                         borderWidth: CGFloat?,
+    func styleBackground(backgroundColor: UIColor? = nil,
+                         borderColor: UIColor? = nil,
+                         borderWidth: CGFloat? = nil,
                          cornerRadius: RoundingStyle = .none,
                          shadowColor: UIColor? = nil,
                          shadowOffset: CGSize? = nil,
