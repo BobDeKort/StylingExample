@@ -9,16 +9,6 @@
 import Foundation
 import UIKit
 
-// Define certain rounding styles you would like to achieve using corner radius
-enum RoundingStyle {
-    case slightlyRounded
-    case circle
-    case roundedSideHorizontal
-    case roundedSideVertical
-    case value(CGFloat)
-    case none
-}
-
 // Define your styles below
 enum Styles: String {
     case ExampleStyle
@@ -165,6 +155,16 @@ enum Styles: String {
             return newStyle
         }
     }
+}
+
+// Define certain rounding styles you would like to achieve using corner radius
+enum RoundingStyle {
+    case slightlyRounded
+    case circle
+    case roundedSideHorizontal
+    case roundedSideVertical
+    case value(CGFloat)
+    case none
 }
 
 // Base class to hold all possible styling attributes

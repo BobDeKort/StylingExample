@@ -17,10 +17,6 @@
 		C4456D3B220CCFA200F18DB4 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D3A220CCFA200F18DB4 /* UILabel.swift */; };
 		C4456D4C220F1B0500F18DB4 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D4B220F1B0500F18DB4 /* UITextField.swift */; };
 		C4456D51221344B900F18DB4 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D50221344B900F18DB4 /* ViewController2.swift */; };
-		C4456D7622134F5B00F18DB4 /* NStackSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4456D7522134F5B00F18DB4 /* NStackSDK.framework */; };
-		C4456D7A22134F6800F18DB4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4456D7722134F6700F18DB4 /* Alamofire.framework */; };
-		C4456D7B22134F6800F18DB4 /* Cashier.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4456D7822134F6800F18DB4 /* Cashier.framework */; };
-		C4456D7C22134F6800F18DB4 /* Serpent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4456D7922134F6800F18DB4 /* Serpent.framework */; };
 		C47BF01E220D7F38003E9B0F /* UIColors+UIFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BF01D220D7F38003E9B0F /* UIColors+UIFonts.swift */; };
 		C483DF08220DB80A0087D636 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483DF07220DB80A0087D636 /* CALayer+Shadow.swift */; };
 		C4B8A336220D907E00793B77 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A335220D907E00793B77 /* Models.swift */; };
@@ -55,10 +51,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4456D7622134F5B00F18DB4 /* NStackSDK.framework in Frameworks */,
-				C4456D7A22134F6800F18DB4 /* Alamofire.framework in Frameworks */,
-				C4456D7B22134F6800F18DB4 /* Cashier.framework in Frameworks */,
-				C4456D7C22134F6800F18DB4 /* Serpent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,7 +141,6 @@
 				C4456D21220CCF4100F18DB4 /* Sources */,
 				C4456D22220CCF4100F18DB4 /* Frameworks */,
 				C4456D23220CCF4100F18DB4 /* Resources */,
-				C4456D7D22134F7600F18DB4 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -205,31 +196,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		C4456D7D22134F7600F18DB4 /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Cashier.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/NStackSDK.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Serpent.framework",
-			);
-			name = Carthage;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C4456D21220CCF4100F18DB4 /* Sources */ = {
