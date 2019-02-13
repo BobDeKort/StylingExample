@@ -11,6 +11,7 @@ import UIKit
 
 // Define your styles below
 enum Styles: String {
+    // 1)
     case ExampleStyle
     
     case DefaultTextFieldHeader
@@ -20,6 +21,7 @@ enum Styles: String {
     
     // Define you styles here
     var style: Style {
+        // 2)
         switch self {
         // MARK: Example Style
         case .ExampleStyle:
@@ -41,6 +43,7 @@ enum Styles: String {
                 Currenly supported by: UITextField
              
             */
+            // 3)
             let newStyle = Style(name: self.rawValue,
                                  isStylable: false,
                                  isTextStylable: true,
