@@ -2,7 +2,7 @@
 
 ## 📖 Project description
 This project shows how to use the Styling extensions.
-The styling extensions provide an easier way to style UIViews and subclasses.
+The styling extensions provide an easier way to style UIViews and its subclasses.
 
 ##  🔧 Installation
 1. Copy `Styling` folder from this project
