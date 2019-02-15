@@ -15,7 +15,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        // Testing validation extension
+        
+        let validEmail = "dekortbob@hotmail.com"
+        let validEmail2 = "bogo@nodes.dk"
+        let invalidEmail = "a"
+        let invalidEmail2 = "a@b"
+        let invalidEmail3 = "a.b"
+        let invalidEmail4 = "dekortbob@hotmailcom"
+        
+        print("----------------------")
+        print("Validating emails")
+        print(validEmail.validate(with: .email))
+        print(validEmail2.validate(with: .email))
+        print(invalidEmail.validate(with: .email))
+        print(invalidEmail2.validate(with: .email))
+        print(invalidEmail3.validate(with: .email))
+        print(invalidEmail4.validate(with: .email))
+        print("----------------------")
+        
+        // Testing userdefaults base
+        let user = User(name: "Bob",
+                        email: "dekortbob@hotmail.com",
+                        birthday: Date(),
+                        isPremium: true,
+                        numberOfFriends: 10)
+
+        print("----------------------")
+        print("Setting values to UserDefaultsUserCache")
+        let userCache = UserCache()
+        userCache.user = user
+        userCache.accessToken = "This is an access token"
+        userCache.refreshToken = "This is a refresh token"
+
+        print("----------------------")
+        print("Retrieving values form UserDefaultsUserCache")
+        print("User: \(userCache.user?.name)")
+        print("User: \(userCache.user?.birthday)")
+        print("Access token: \(userCache.accessToken)")
+        print("Refresh token: \(userCache.refreshToken)")
+        print("----------------------")
+        
         return true
     }
 
