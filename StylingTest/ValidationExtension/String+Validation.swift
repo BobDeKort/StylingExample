@@ -23,7 +23,7 @@ public extension String {
         return self.validate(with: .email)
     }
     
-    // General method to validate a string using regular expressions defined in the ValidationExpression enum
+    // Method to validate a string using regular expressions defined in the ValidationExpression enum
     public func validate(with expression: ValidationExpression) -> Bool {
         return self.validate(with: expression.rawValue)
     }

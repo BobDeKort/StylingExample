@@ -10,6 +10,7 @@ import Foundation
 
 // MARK: Extension
 
+/// Allows the user to store and retrieve any object, custom(Codable) or native.
 extension UserDefaults {
     /// Retrieves a Codable object from UserDefaults
     ///
@@ -67,8 +68,7 @@ extension UserDefaults {
     }
 }
 
-// MARK: Example of a UserCache similar to the one in Scandlines
-
+// MARK: Example of a UserCache
 class User: Codable {
     let name: String
     let email: String
