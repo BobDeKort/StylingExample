@@ -8,13 +8,6 @@
 
 import Foundation
 
-
-// TODO: Expand the app to have different sections
-// Section for Styling
-// Section for Userdefaults
-// Section for String validation
-
-
 // MARK: Extension
 
 extension UserDefaults {
