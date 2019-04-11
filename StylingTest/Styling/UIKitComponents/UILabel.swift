@@ -14,15 +14,15 @@ extension UILabel: TextStylable {
 
     // See UIView extension
     @objc override func style(with name: String) {
-        // Applying general styling for UIView
-        super.style(with: name)
-        
-        // Applying specific UIlabel styling
         guard let style = Styles(rawValue: name)?.style else {
             print("WARNING: No style found named: \(name)")
             return
         }
         
+        // Applying general styling for UIView
+        super.style(with: name)
+
+        // Applying specific UIlabel styling
         // Checkin if style is Text stylable, background styling is handles by the above super.style
         if style.isTextStylable {
             self.styleText(font: style.font,

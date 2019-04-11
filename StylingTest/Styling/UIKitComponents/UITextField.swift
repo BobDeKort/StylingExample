@@ -12,14 +12,13 @@ import UIKit
 extension UITextField: TextStylable, PlaceholderStylable {
     
     @objc override func style(with name: String) {
-        // Applying gerenal styling for UIView
-        super.style(with: name)
-        
-        // Applying specific UITextField styling
         guard let style = Styles(rawValue: name)?.style else {
             print("WARNING: No style found named: \(name)")
             return
         }
+        
+        // Applying gerenal styling for UIView
+        super.style(with: name)
         
         if style.isTextStylable {
             self.styleText(font: style.font,

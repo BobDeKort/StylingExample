@@ -13,14 +13,13 @@ extension UIButton: TextStylable {
     
     // See UIView extension
     @objc override func style(with name: String) {
-        // Applying general styling for UIView
-        super.style(with: name)
-        
-        // Applying specific UIlabel styling
         guard let style = Styles(rawValue: name)?.style else {
             print("WARNING: No style found named: \(name)")
             return
         }
+        
+        // Applying general styling for UIView
+        super.style(with: name)
         
         if style.isTextStylable {
             self.styleText(font: style.font,
@@ -35,6 +34,8 @@ extension UIButton: TextStylable {
                    allignment: NSTextAlignment? = .left,
                    isUppercased: Bool? = false)
     {
+        // TODO: Use attributes String for title?
+        
         self.titleLabel?.font = font
         self.setTitleColor(textColor, for: .normal)
         

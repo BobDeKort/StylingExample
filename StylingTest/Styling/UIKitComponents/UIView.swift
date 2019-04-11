@@ -81,7 +81,9 @@ extension UIView: Stylable, BackgroundStylable {
         }
         
         // Set background color
-        self.backgroundColor = backgroundColor
+        if let backgroundColor = backgroundColor {
+            self.backgroundColor = backgroundColor
+        }
         
         // Set border style
         if let borderWidth = borderWidth, let borderColor = borderColor {

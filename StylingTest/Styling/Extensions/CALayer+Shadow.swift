@@ -10,18 +10,6 @@ import Foundation
 import UIKit
 
 extension CALayer {
-    func setShadow(color: UIColor = .darkGray,
-                   opacity: Float = 1,
-                   offset: CGSize = CGSize.zero,
-                   radius: CGFloat = 0)
-    {
-        self.masksToBounds = false
-        self.shadowColor = color.cgColor
-        self.shadowOpacity = opacity
-        self.shadowOffset = offset
-        self.shadowRadius = radius
-    }
-    
     func setShadowAndCornerRadius(cornerRadius: CGFloat,
                                   shadowColor: UIColor,
                                   shadowOffset: CGSize,

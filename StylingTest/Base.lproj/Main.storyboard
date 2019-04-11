@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6xu-zN-8XU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6xu-zN-8XU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -96,6 +96,9 @@
                                     <constraint firstAttribute="height" constant="100" id="2tk-i2-xYY"/>
                                     <constraint firstAttribute="width" constant="200" id="TVy-xB-5KN"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="ShadowAndRounded"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qxb-Bs-gxl">
                                 <rect key="frame" x="20" y="475.5" width="335" height="70"/>
@@ -145,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="81" y="46"/>
+            <point key="canvasLocation" x="182" y="130"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5pQ-No-HMN">
@@ -407,9 +410,9 @@
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="36" id="hk7-pW-492"/>
                                                         </constraints>
-                                                        <state key="normal" title="Continue"/>
+                                                        <state key="normal" title="See code example"/>
                                                         <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="continueButton"/>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="ContinueButton"/>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
                                                             <segue destination="h0f-CP-z2j" kind="show" id="pgJ-1y-LGB"/>

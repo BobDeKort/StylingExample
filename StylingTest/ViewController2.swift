@@ -38,8 +38,8 @@ class ViewController2: UIViewController {
         super.viewDidLoad()
 
         // General style method
-//        styleWithStyles()
-        styleWithAttributes()
+        styleWithStyles()
+//        styleWithAttributes()
     }
     
     // Example of styling components in code using predefined styles
@@ -56,7 +56,7 @@ class ViewController2: UIViewController {
             textField?.style(with: Styles.DefaultTextField)
         }
         
-        continueButton.style(with: .continueButton)
+        continueButton.style(with: .ContinueButton)
     }
     
     // Example of styling components in code using specific attributes
