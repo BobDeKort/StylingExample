@@ -4,21 +4,10 @@
 This project shows how to use the Styling extensions.
 The styling extensions provide an easier way to style UIViews and its subclasses.
 
-**Note**: Changing this project to contain more and more useful extensions instead of only containing the styling extension.
-
-Currently In progress or to do:
-
-* Converting UI of the app to allow playing around with the extensions
-* Expand string validation extension to support common validations needed
-
-Currenlty included but not documented in the README:
-
-* Userdefaults extension to store and retrieve any object in 1 call
-* String validation extension (WIP) currently supports email and custom regex
-
 ##  🔧 Installation
 1. Copy `Styling` folder from this project
-2. Paste `Styling` folder into your new project
+2. Paste `Styling` folder into your new project directory
+2. Use `Add file to "[ProjectName]"` to add the files to your new project
 
 ## Usage
 
