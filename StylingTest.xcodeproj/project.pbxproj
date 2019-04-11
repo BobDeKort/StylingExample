@@ -19,9 +19,10 @@
 		C4456D51221344B900F18DB4 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D50221344B900F18DB4 /* ViewController2.swift */; };
 		C47BF01E220D7F38003E9B0F /* UIColors+UIFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BF01D220D7F38003E9B0F /* UIColors+UIFonts.swift */; };
 		C483DF08220DB80A0087D636 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483DF07220DB80A0087D636 /* CALayer+Shadow.swift */; };
+		C4997E20225FCACE00686A0C /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4997E1F225FCACD00686A0C /* Styles.swift */; };
 		C4B8A336220D907E00793B77 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A335220D907E00793B77 /* Models.swift */; };
 		C4B8A338220D909500793B77 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A337220D909500793B77 /* Protocols.swift */; };
-		C4BF7E39225F50BA00521F4E /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF7E38225F50BA00521F4E /* Styles.swift */; };
+		C4BF7E39225F50BA00521F4E /* StyleType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF7E38225F50BA00521F4E /* StyleType.swift */; };
 		C4FBB1712216D4A100E5C24E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FBB1702216D4A100E5C24E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,9 +45,10 @@
 		C4456D7922134F6800F18DB4 /* Serpent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Serpent.framework; path = ../TranslationTest/Carthage/Build/iOS/Serpent.framework; sourceTree = "<group>"; };
 		C47BF01D220D7F38003E9B0F /* UIColors+UIFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+UIFonts.swift"; sourceTree = "<group>"; };
 		C483DF07220DB80A0087D636 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
+		C4997E1F225FCACD00686A0C /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		C4B8A335220D907E00793B77 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		C4B8A337220D909500793B77 /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
-		C4BF7E38225F50BA00521F4E /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		C4BF7E38225F50BA00521F4E /* StyleType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyleType.swift; sourceTree = "<group>"; };
 		C4FBB1702216D4A100E5C24E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +119,8 @@
 		C4B8A334220D8F8200793B77 /* Styling */ = {
 			isa = PBXGroup;
 			children = (
-				C4BF7E38225F50BA00521F4E /* Styles.swift */,
+				C4BF7E38225F50BA00521F4E /* StyleType.swift */,
+				C4997E1F225FCACD00686A0C /* Styles.swift */,
 				C4B8A335220D907E00793B77 /* Models.swift */,
 				C4B8A337220D909500793B77 /* Protocols.swift */,
 				C4B8A339220D90C900793B77 /* UIKitComponents */,
@@ -209,11 +212,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4456D2B220CCF4100F18DB4 /* ViewController.swift in Sources */,
+				C4997E20225FCACE00686A0C /* Styles.swift in Sources */,
 				C42717C7220DC1DD003B555A /* UIView.swift in Sources */,
 				C4B8A338220D909500793B77 /* Protocols.swift in Sources */,
 				C4456D4C220F1B0500F18DB4 /* UITextField.swift in Sources */,
 				C4B8A336220D907E00793B77 /* Models.swift in Sources */,
-				C4BF7E39225F50BA00521F4E /* Styles.swift in Sources */,
+				C4BF7E39225F50BA00521F4E /* StyleType.swift in Sources */,
 				C4456D51221344B900F18DB4 /* ViewController2.swift in Sources */,
 				C4456D3B220CCFA200F18DB4 /* UILabel.swift in Sources */,
 				C4456D29220CCF4100F18DB4 /* AppDelegate.swift in Sources */,

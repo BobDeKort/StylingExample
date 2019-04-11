@@ -16,7 +16,7 @@ protocol Stylable {
     
     // Methods
     func style(with name: String)
-    func style(with style: Styles)
+    func style(with style: StyleType)
 }
 
 protocol TextStylable {

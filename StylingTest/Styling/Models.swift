@@ -21,7 +21,9 @@ enum RoundingStyle {
 
 // Base class to hold all possible styling attributes
 class Style {
-    let name: String
+    var name: String {
+        return String(describing: self)
+    }
     
     // Stylable
     let isStylable: Bool
@@ -48,10 +50,13 @@ class Style {
     var placeholderTextAllignment: NSTextAlignment? = nil
     var placeholderIsUppercased: Bool? = nil
     
-    init(name: String, isStylable: Bool, isTextStylable: Bool, isPlaceholderStylable: Bool) {
-        self.name = name
+    init(isStylable: Bool, isTextStylable: Bool, isPlaceholderStylable: Bool) {
         self.isStylable = isStylable
         self.isTextStylable = isTextStylable
         self.isPlaceholderStylable = isPlaceholderStylable
+    }
+    
+    var className: String {
+        return String(describing: self)
     }
 }

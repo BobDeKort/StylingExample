@@ -2,162 +2,113 @@
 //  Styles.swift
 //  StylingTest
 //
-//  Created by Bob De Kort on 11/04/2019.
+//  Created by Bob De Kort on 4/11/19.
 //  Copyright © 2019 Bob De Kort. All rights reserved.
 //
 
 import UIKit
 
-// Define your styles below
-enum Styles: String {
-    // 1)
-    case exampleStyle
-    
-    case defaultTextFieldHeader
-    case defaultTextField
-    
-    case continueButton
-    case shadowAndRounded
-    
-    // Define you styles here
-    var style: Style {
-        // 2)
-        switch self {
-        // MARK: Example Style
-        case .exampleStyle:
-            /* How to setup a new style for the project
-             1. Add new enum case just above here
-             2. Add the newly added case to this switch
-             3. Add your style properties and return the style as shown below
-             Make sure to set the isStylable, isTextStylable and isPlacholderStylable
-             properties when initialising your new style
-             isStylable: Sets the background color, border style, corner radius and shadow.
-             Currently supported by: All UIViews and sub classes
-             Note: You can set corner radius and shadow that the same time on a UIView
-             but not any other sub classes.
-             isTextStylable: Sets the font, textColor, text allignment and
-             can uppercase the current text in the component
-             Currently supported by: UILabel, UIButton, UITextField
-             isPlaceholderStylable: Sets the font, textColor, textAllignment and
-             can uppercase the current placeholder text in the component.
-             Currenly supported by: UITextField
-             
-             */
-            // 3)
-            let newStyle = Style(name: self.rawValue,
-                                 isStylable: false,
-                                 isTextStylable: true,
-                                 isPlaceholderStylable: false)
-            
-            // (You can remove any of the values below if you dont't need them for this style)
-            
-            // Background Stylable
-            // Set you backround style properties here
-            // Note: You can set corner radius and shadow at the same time on a UIView,
-            // but not any other sub classes. You can ofcourse choose one of the two on
-            // the sub classes
-            newStyle.backgroundColor = .green
-            newStyle.borderColor = .red
-            newStyle.borderWidth = 5
-            newStyle.cornerRadius = .roundedSideHorizontal
-            newStyle.shadowColor = nil
-            newStyle.shadowOffset = nil
-            newStyle.shadowOpacity = nil
-            newStyle.clipsToBounds = true
-            
-            // Text Stylable
-            // Sets font, text color, allignment and can uppercase the current text of the component
-            newStyle.font = .systemLarge
-            newStyle.textColor = .marine
-            newStyle.allignment = .center
-            newStyle.isUppercased = false
-            
-            // PlaceholderStylable
-            // Sets font, text color, allignment and can uppercase the current
-            // placeholder text of the component
-            
-            newStyle.placeholderFont = .systemLarge
-            newStyle.placeeholderTextColor = .lightGray
-            newStyle.allignment = .center
-            newStyle.isUppercased = false
-            
-            return newStyle
-        // MARK: DefaultTextFieldHeader
-        case .defaultTextFieldHeader:
-            let newStyle = Style(name: self.rawValue,
-                                 isStylable: false,
-                                 isTextStylable: true,
-                                 isPlaceholderStylable: false)
-            // Text Stylable
-            // Sets font, text color, allignment and can uppercase the current text of the component
-            newStyle.font = .systemMedium
-            newStyle.textColor = .marine
-            newStyle.allignment = .left
-            newStyle.isUppercased = true
-            
-            return newStyle
-        // MARK: DefaultTextField
-        case .defaultTextField:
-            let newStyle = Style(name: self.rawValue,
-                                 isStylable: true,
-                                 isTextStylable: true,
-                                 isPlaceholderStylable: true)
-            
-            // Background Stylable
-            newStyle.backgroundColor = .textFieldbackground
-            newStyle.borderColor = .textFieldBorder
-            newStyle.borderWidth = 1
-            newStyle.cornerRadius = .value(5)
-            
-            // Text Stylable
-            // Sets font, text color, allignment and can uppercase the current text of the component
-            newStyle.font = .systemMedium
-            newStyle.textColor = .marine
-            newStyle.allignment = .left
-            newStyle.isUppercased = false
-            
-            // PlaceholderStylable
-            // Sets font, text color, allignment and can uppercase the current
-            // placeholder text of the component
-            
-            newStyle.placeholderFont = .systemMedium
-            newStyle.textColor = .lightGray
-            newStyle.allignment = .center
-            newStyle.isUppercased = false
-            
-            return newStyle
-        case .continueButton:
-            let newStyle = Style(name: self.rawValue,
-                                 isStylable: true,
-                                 isTextStylable: true,
-                                 isPlaceholderStylable: false)
-            
-            // Background Stylable
-            // Set you backround style properties here
-            newStyle.backgroundColor = .projectOrange
-            newStyle.cornerRadius = .roundedSideHorizontal
-            
-            // Text Stylable
-            // Sets font, text color, allignment and can uppercase the current text of the component
-            newStyle.font = .systemMedium
-            newStyle.textColor = .white
-            newStyle.allignment = .center
-            newStyle.isUppercased = true
-            
-            return newStyle
-            
-        case .shadowAndRounded:
-            let newStyle = Style(name: self.rawValue,
-                                 isStylable: true,
-                                 isTextStylable: false,
-                                 isPlaceholderStylable: false)
-            
-            newStyle.shadowColor = .gray
-            newStyle.shadowOffset = CGSize(width: -10, height: 10)
-            newStyle.shadowOpacity = 0.2
-            newStyle.cornerRadius = .value(20)
-            
-            return newStyle
-        }
+class ExampleStyle: Style {
+    override init(isStylable: Bool, isTextStylable: Bool, isPlaceholderStylable: Bool) {
+        super.init(isStylable: isStylable,
+                   isTextStylable: isTextStylable,
+                   isPlaceholderStylable: isPlaceholderStylable)
+        backgroundColor = .green
+        borderColor = .red
+        borderWidth = 5
+        cornerRadius = .roundedSideHorizontal
+        shadowColor = nil
+        shadowOffset = nil
+        shadowOpacity = nil
+        clipsToBounds = true
+        
+        // Text Stylable
+        // Sets font, text color, allignment and can uppercase the current text of the component
+        font = .systemLarge
+        textColor = .marine
+        allignment = .center
+        isUppercased = false
+        
+        // PlaceholderStylable
+        // Sets font, text color, allignment and can uppercase the current
+        // placeholder text of the component
+        
+        placeholderFont = .systemLarge
+        placeeholderTextColor = .lightGray
+        allignment = .center
+        isUppercased = false
+    }
+}
+
+class DefaultTextFieldHeader: Style {
+    override init(isStylable: Bool, isTextStylable: Bool, isPlaceholderStylable: Bool) {
+        super.init(isStylable: isStylable,
+                   isTextStylable: isTextStylable,
+                   isPlaceholderStylable: isPlaceholderStylable)
+        font = .systemMedium
+        textColor = .marine
+        allignment = .left
+        isUppercased = true
+    }
+}
+
+class DefaultTextField: Style {
+    override init(isStylable: Bool, isTextStylable: Bool, isPlaceholderStylable: Bool) {
+        super.init(isStylable: isStylable,
+                   isTextStylable: isTextStylable,
+                   isPlaceholderStylable: isPlaceholderStylable)
+        
+        // Background Stylable
+        backgroundColor = .textFieldbackground
+        borderColor = .textFieldBorder
+        borderWidth = 1
+        cornerRadius = .value(5)
+        
+        // Text Stylable
+        // Sets font, text color, allignment and can uppercase the current text of the component
+        font = .systemMedium
+        textColor = .marine
+        allignment = .left
+        isUppercased = false
+        
+        // PlaceholderStylable
+        // Sets font, text color, allignment and can uppercase the current
+        // placeholder text of the component
+        
+        placeholderFont = .systemMedium
+        textColor = .lightGray
+        allignment = .center
+        isUppercased = false
+    }
+}
+
+class ContinueButton: Style {
+    override init(isStylable: Bool, isTextStylable: Bool, isPlaceholderStylable: Bool) {
+        super.init(isStylable: isStylable,
+                   isTextStylable: isTextStylable,
+                   isPlaceholderStylable: isPlaceholderStylable)
+        // Background Stylable
+        // Set you backround style properties here
+        backgroundColor = .projectOrange
+        cornerRadius = .roundedSideHorizontal
+        
+        // Text Stylable
+        // Sets font, text color, allignment and can uppercase the current text of the component
+        font = .systemMedium
+        textColor = .white
+        allignment = .center
+        isUppercased = true
+    }
+}
+
+class ShadowAndRounded: Style {
+    override init(isStylable: Bool, isTextStylable: Bool, isPlaceholderStylable: Bool) {
+        super.init(isStylable: isStylable,
+                   isTextStylable: isTextStylable,
+                   isPlaceholderStylable: isPlaceholderStylable)
+        shadowColor = .gray
+        shadowOffset = CGSize(width: -10, height: 10)
+        shadowOpacity = 0.2
+        cornerRadius = .value(20)
     }
 }

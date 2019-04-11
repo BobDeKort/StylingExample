@@ -36,7 +36,7 @@ extension UIView: Stylable, BackgroundStylable {
     ///
     /// - Parameter name: the style name as defined in the Styles enums rawValue
     @objc func style(with name: String) {
-        guard let style = Styles(rawValue: name)?.style else {
+        guard let style = StyleType(rawValue: name)?.style else {
             print("WARNING: No style found named: \(name)")
             return
         }
@@ -54,7 +54,7 @@ extension UIView: Stylable, BackgroundStylable {
     }
     
     /// Convenience method to use for developers
-    func style(with style: Styles) {
+    func style(with style: StyleType) {
         self.style(with: style.rawValue)
     }
     

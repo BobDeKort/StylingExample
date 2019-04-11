@@ -53,7 +53,7 @@ class ViewController2: UIViewController {
         
         [emailTextField, firstNameTextField, familyTextField,
          addressTextField, postCodeTextField, cityTextField].forEach { (textField) in
-            textField?.style(with: Styles.defaultTextField)
+            textField?.style(with: StyleType.defaultTextField)
         }
         
         continueButton.style(with: .continueButton)

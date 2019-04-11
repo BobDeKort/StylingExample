@@ -13,7 +13,7 @@ extension UIButton: TextStylable {
     
     // See UIView extension
     @objc override func style(with name: String) {
-        guard let style = Styles(rawValue: name)?.style else {
+        guard let style = StyleType(rawValue: name)?.style else {
             print("WARNING: No style found named: \(name)")
             return
         }
