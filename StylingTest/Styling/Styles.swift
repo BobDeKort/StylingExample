@@ -37,7 +37,7 @@ enum Styles: String {
              but not any other sub classes.
              isTextStylable: Sets the font, textColor, text allignment and
              can uppercase the current text in the component
-             Currently supported by: UILable, UIButton, UITextField
+             Currently supported by: UILabel, UIButton, UITextField
              isPlaceholderStylable: Sets the font, textColor, textAllignment and
              can uppercase the current placeholder text in the component.
              Currenly supported by: UITextField
@@ -103,13 +103,7 @@ enum Styles: String {
                                  isTextStylable: true,
                                  isPlaceholderStylable: true)
             
-            // (You can remove any of the values below if you dont't need them for this style)
-            
             // Background Stylable
-            // Set you backround style properties here
-            // Note: You can set corner radius and shadow at the same time on a UIView,
-            // but not any other sub classes. You can ofcourse choose one of the two on
-            // the sub classes
             newStyle.backgroundColor = .textFieldbackground
             newStyle.borderColor = .textFieldBorder
             newStyle.borderWidth = 1
@@ -138,13 +132,8 @@ enum Styles: String {
                                  isTextStylable: true,
                                  isPlaceholderStylable: false)
             
-            // (You can remove any of the values below if you dont't need them for this style)
-            
             // Background Stylable
             // Set you backround style properties here
-            // Note: You can set corner radius and shadow at the same time on a UIView,
-            // but not any other sub classes. You can ofcourse choose one of the two on
-            // the sub classes
             newStyle.backgroundColor = .projectOrange
             newStyle.cornerRadius = .roundedSideHorizontal
             
