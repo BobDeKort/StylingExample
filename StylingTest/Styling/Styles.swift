@@ -11,20 +11,20 @@ import UIKit
 // Define your styles below
 enum Styles: String {
     // 1)
-    case ExampleStyle
+    case exampleStyle
     
-    case DefaultTextFieldHeader
-    case DefaultTextField
+    case defaultTextFieldHeader
+    case defaultTextField
     
-    case ContinueButton
-    case ShadowAndRounded
+    case continueButton
+    case shadowAndRounded
     
     // Define you styles here
     var style: Style {
         // 2)
         switch self {
         // MARK: Example Style
-        case .ExampleStyle:
+        case .exampleStyle:
             /* How to setup a new style for the project
              1. Add new enum case just above here
              2. Add the newly added case to this switch
@@ -83,7 +83,7 @@ enum Styles: String {
             
             return newStyle
         // MARK: DefaultTextFieldHeader
-        case .DefaultTextFieldHeader:
+        case .defaultTextFieldHeader:
             let newStyle = Style(name: self.rawValue,
                                  isStylable: false,
                                  isTextStylable: true,
@@ -97,7 +97,7 @@ enum Styles: String {
             
             return newStyle
         // MARK: DefaultTextField
-        case .DefaultTextField:
+        case .defaultTextField:
             let newStyle = Style(name: self.rawValue,
                                  isStylable: true,
                                  isTextStylable: true,
@@ -126,7 +126,7 @@ enum Styles: String {
             newStyle.isUppercased = false
             
             return newStyle
-        case .ContinueButton:
+        case .continueButton:
             let newStyle = Style(name: self.rawValue,
                                  isStylable: true,
                                  isTextStylable: true,
@@ -146,7 +146,7 @@ enum Styles: String {
             
             return newStyle
             
-        case .ShadowAndRounded:
+        case .shadowAndRounded:
             let newStyle = Style(name: self.rawValue,
                                  isStylable: true,
                                  isTextStylable: false,

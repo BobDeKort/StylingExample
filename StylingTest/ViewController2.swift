@@ -44,19 +44,19 @@ class ViewController2: UIViewController {
     
     // Example of styling components in code using predefined styles
     private func styleWithStyles() {
-        headerLabel.style(with: .ExampleStyle)
+        headerLabel.style(with: .exampleStyle)
         
         [emailLabel, firstNameLabel, familyNameLabel,
          addressLabel, postcodeLabel, cityLabel].forEach { (label) in
-            label?.style(with: .DefaultTextFieldHeader)
+            label?.style(with: .defaultTextFieldHeader)
         }
         
         [emailTextField, firstNameTextField, familyTextField,
          addressTextField, postCodeTextField, cityTextField].forEach { (textField) in
-            textField?.style(with: Styles.DefaultTextField)
+            textField?.style(with: Styles.defaultTextField)
         }
         
-        continueButton.style(with: .ContinueButton)
+        continueButton.style(with: .continueButton)
     }
     
     // Example of styling components in code using specific attributes
