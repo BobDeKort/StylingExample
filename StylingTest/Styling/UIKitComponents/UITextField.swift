@@ -29,7 +29,7 @@ extension UITextField: TextStylable, PlaceholderStylable {
         
         if style.isPlaceholderStylable {
             self.stylePlaceholderText(font: style.placeholderFont,
-                                      textColor: style.placeeholderTextColor,
+                                      textColor: style.placeholderTextColor,
                                       allignment: style.placeholderTextAllignment,
                                       isUppercased: style.placeholderIsUppercased)
         }

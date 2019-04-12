@@ -46,7 +46,7 @@ class Style {
     // Placeholder Stylable
     let isPlaceholderStylable: Bool
     var placeholderFont: UIFont? = nil
-    var placeeholderTextColor: UIColor? = nil
+    var placeholderTextColor: UIColor? = nil
     var placeholderTextAllignment: NSTextAlignment? = nil
     var placeholderIsUppercased: Bool? = nil
     

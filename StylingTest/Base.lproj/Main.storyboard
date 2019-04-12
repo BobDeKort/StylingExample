@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6xu-zN-8XU">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -101,7 +101,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qxb-Bs-gxl">
-                                <rect key="frame" x="20" y="475.5" width="335" height="70"/>
+                                <rect key="frame" x="20" y="475.5" width="335" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49w-vA-ICp">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
@@ -112,34 +112,39 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="Header1"/>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Test" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vrW-e5-e5U">
-                                        <rect key="frame" x="0.0" y="40" width="335" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="Header2"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </textField>
                                 </subviews>
                             </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hello this is a text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B2C-Ym-7s3">
+                                <rect key="frame" x="20" y="515.5" width="335" height="131.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="styleName" value="defaultTextField"/>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="B2C-Ym-7s3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Ed-aM-Jb1"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yHa-zy-ZIZ" secondAttribute="trailing" constant="50" id="267-P9-7sb"/>
                             <constraint firstItem="Qxb-Bs-gxl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="3N6-GO-bwu"/>
                             <constraint firstItem="jZs-Vk-EJl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="6Di-br-W3F"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B2C-Ym-7s3" secondAttribute="trailing" constant="20" id="7Vb-e5-hyo"/>
                             <constraint firstItem="Qxb-Bs-gxl" firstAttribute="top" secondItem="pVS-gH-eT0" secondAttribute="bottom" constant="20" id="8fx-tI-gEy"/>
                             <constraint firstItem="yHa-zy-ZIZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9kH-Rp-B2u"/>
                             <constraint firstItem="Qxb-Bs-gxl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FbH-fg-7Qv"/>
+                            <constraint firstItem="B2C-Ym-7s3" firstAttribute="top" secondItem="Qxb-Bs-gxl" secondAttribute="bottom" constant="10" id="Hdl-2T-mTD"/>
                             <constraint firstItem="jZs-Vk-EJl" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ix4-M6-LE8"/>
                             <constraint firstItem="pVS-gH-eT0" firstAttribute="top" secondItem="yHa-zy-ZIZ" secondAttribute="bottom" constant="20" id="K0p-jV-OhL"/>
                             <constraint firstItem="jZs-Vk-EJl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="26" id="LzU-bP-o7W"/>
                             <constraint firstItem="yHa-zy-ZIZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="OP6-ej-Bre"/>
                             <constraint firstItem="zfc-gV-CNw" firstAttribute="top" secondItem="jZs-Vk-EJl" secondAttribute="bottom" constant="20" id="Q0I-X8-hcg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Qxb-Bs-gxl" secondAttribute="trailing" constant="20" id="QBu-u9-sY6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B2C-Ym-7s3" secondAttribute="bottom" constant="20" id="XPw-YV-7Sd"/>
                             <constraint firstItem="yHa-zy-ZIZ" firstAttribute="top" secondItem="zfc-gV-CNw" secondAttribute="bottom" constant="20" id="ets-Iz-Feh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jZs-Vk-EJl" secondAttribute="trailing" constant="26" id="nhu-XP-ihy"/>
+                            <constraint firstItem="B2C-Ym-7s3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="rdJ-kh-9Sf"/>
                             <constraint firstItem="pVS-gH-eT0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vxh-1g-hRw"/>
                             <constraint firstItem="zfc-gV-CNw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xit-Nz-Iqb"/>
                         </constraints>

@@ -34,9 +34,9 @@ class ExampleStyle: Style {
         // placeholder text of the component
         
         placeholderFont = .systemLarge
-        placeeholderTextColor = .lightGray
-        allignment = .center
-        isUppercased = false
+        placeholderTextColor = .lightGray
+        placeholderTextAllignment = .center
+        placeholderIsUppercased = false
     }
 }
 
@@ -72,9 +72,9 @@ class DefaultTextField: Style {
         // placeholder text of the component
         
         placeholderFont = .systemMedium
-        textColor = .lightGray
-        allignment = .center
-        isUppercased = false
+        placeholderTextColor = .lightGray
+        placeholderTextAllignment = .center
+        placeholderIsUppercased = false
     }
 }
 

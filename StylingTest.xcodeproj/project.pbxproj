@@ -17,6 +17,7 @@
 		C4456D3B220CCFA200F18DB4 /* UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D3A220CCFA200F18DB4 /* UILabel.swift */; };
 		C4456D4C220F1B0500F18DB4 /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D4B220F1B0500F18DB4 /* UITextField.swift */; };
 		C4456D51221344B900F18DB4 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4456D50221344B900F18DB4 /* ViewController2.swift */; };
+		C45806F42260D6D40005065D /* UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45806F32260D6D40005065D /* UITextView.swift */; };
 		C47BF01E220D7F38003E9B0F /* UIColors+UIFonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47BF01D220D7F38003E9B0F /* UIColors+UIFonts.swift */; };
 		C483DF08220DB80A0087D636 /* CALayer+Shadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C483DF07220DB80A0087D636 /* CALayer+Shadow.swift */; };
 		C4997E20225FCACE00686A0C /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4997E1F225FCACD00686A0C /* Styles.swift */; };
@@ -43,6 +44,7 @@
 		C4456D7722134F6700F18DB4 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../TranslationTest/Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		C4456D7822134F6800F18DB4 /* Cashier.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cashier.framework; path = ../TranslationTest/Carthage/Build/iOS/Cashier.framework; sourceTree = "<group>"; };
 		C4456D7922134F6800F18DB4 /* Serpent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Serpent.framework; path = ../TranslationTest/Carthage/Build/iOS/Serpent.framework; sourceTree = "<group>"; };
+		C45806F32260D6D40005065D /* UITextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextView.swift; sourceTree = "<group>"; };
 		C47BF01D220D7F38003E9B0F /* UIColors+UIFonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+UIFonts.swift"; sourceTree = "<group>"; };
 		C483DF07220DB80A0087D636 /* CALayer+Shadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CALayer+Shadow.swift"; sourceTree = "<group>"; };
 		C4997E1F225FCACD00686A0C /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				C4456D3A220CCFA200F18DB4 /* UILabel.swift */,
 				C42717C8220DD446003B555A /* UIButton.swift */,
 				C4456D4B220F1B0500F18DB4 /* UITextField.swift */,
+				C45806F32260D6D40005065D /* UITextView.swift */,
 			);
 			path = UIKitComponents;
 			sourceTree = "<group>";
@@ -218,6 +221,7 @@
 				C4456D4C220F1B0500F18DB4 /* UITextField.swift in Sources */,
 				C4B8A336220D907E00793B77 /* Models.swift in Sources */,
 				C4BF7E39225F50BA00521F4E /* StyleType.swift in Sources */,
+				C45806F42260D6D40005065D /* UITextView.swift in Sources */,
 				C4456D51221344B900F18DB4 /* ViewController2.swift in Sources */,
 				C4456D3B220CCFA200F18DB4 /* UILabel.swift in Sources */,
 				C4456D29220CCF4100F18DB4 /* AppDelegate.swift in Sources */,
