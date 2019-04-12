@@ -31,65 +31,73 @@ In the file `Styling/Models.swift` you will see the following Styles enum.
 
 To add a new style:
 
-1. Add the name of your style to the enum
-2. Add the new enum case to the switch in the style property
-3. Define the properties of you style, You can leave out any unused properties and it will just be ignored.
+1. Define your Style class as a subclass of `Style` in the `Styles.swift` file.
+2. Add the name of your style to the `StyleType` enum
+3. Return your newly create style subclass in the style variable of the `StyleType` enum
+4. Define the properties of your style in the init, You can leave out any unused properties and it will just be ignored.
 
 A few tips:
 
 * Make sure to set the `isStylable`, `isTextStylable` and `isPlaceholderStylable` to the right value. This should speedup the styling if there are a lot of components to style.
 * Add a `// MARK:` for each style so you can find it fast when you want to change it.
 * Define Colors and Fonts as class variables. You can find an example in `Extensions/UIColors+UIFonts.swift` file.
+* Step 4 can ofcourse be done during step 1 as well.
 * Add your own tips by letting me know or opening a pull request.
 
+`Styles.swift`
+```
+// (1)
+// MARK: ExampleStyle
+class ExampleStyle: Style {
+    override init() {
+        super.init(isStylable: true, isTextStylable: true, isPlaceholderStylable: true)
+   	// (4)
+        backgroundColor = .green
+        borderColor = .red
+        borderWidth = 5
+        cornerRadius = .roundedSideHorizontal
+        shadowColor = nil
+        shadowOffset = nil
+        shadowOpacity = nil
+        clipsToBounds = true
+        
+        // Text Stylable
+        // Sets font, text color, allignment and can uppercase the current text of the component
+        font = .systemLarge
+        textColor = .marine
+        allignment = .center
+        isUppercased = false
+        
+        // PlaceholderStylable
+        // Sets font, text color, allignment and can uppercase the current
+        // placeholder text of the component
+        
+        placeholderFont = .systemLarge
+        placeeholderTextColor = .lightGray
+        allignment = .center
+        isUppercased = false
+    }
+}
+```
 
+
+`StyleType.swift`
 ```
 enum Styles: String {
-    // (1)
-	case ExampleStyle
-	case ExampleStyle2
-	case ExampleStyle3
+    // (2)
+	case exampleStyle
+	case exampleStyle2
+	case exampleStyle3
     
-    // Define you styles here
+    // Return your style class here
     var style: Style {
-        // (2)
         switch self {
-        // MARK: Example Style
-        case .ExampleStyle:
-            // (3)
-            let newStyle = Style(name: self.rawValue,
-                                 isStylable: false,
-                                 isTextStylable: true,
-                                 isPlaceholderStylable: false)
-            
-            // Background Styling
-            newStyle.backgroundColor = .green
-            newStyle.borderColor = .red
-            newStyle.borderWidth = 5
-            newStyle.cornerRadius = .roundedSideHorizontal
-            newStyle.shadowColor = nil
-            newStyle.shadowOffset = nil
-            newStyle.shadowOpacity = nil
-            newStyle.clipsToBounds = true
-            
-            // Text Stylable
-            newStyle.font = .systemLarge
-            newStyle.textColor = .marine
-            newStyle.allignment = .center
-            newStyle.isUppercased = false
-            
-            // PlaceholderStylable
-            newStyle.placeholderFont = .systemLarge
-            newStyle.placeeholderTextColor = .lightGray
-            newStyle.allignment = .center
-            newStyle.isUppercased = false
-            
-            return newStyle
+	// (3)
+        case .exampleStyle: return ExampleStyle()
         }
     }
 }
 ```
-(I'm not 100% happy with this way of defining a style, let me know if you have a better idea)
 
 ### Using your style
 
