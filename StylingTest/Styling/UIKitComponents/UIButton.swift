@@ -29,6 +29,13 @@ extension UIButton: TextStylable {
         }
     }
     
+    /// Function to style this UIButtons text using the individual attributes provided
+    ///
+    /// - Parameters:
+    ///   - font: The font you want this buttons title to use
+    ///   - textColor: The color you want this buttons title to use
+    ///   - allignment: The text allignment this buttons title should use
+    ///   - isUppercased: Sets the current title text to uppercase if true
     func styleText(font: UIFont?,
                    textColor: UIColor?,
                    allignment: NSTextAlignment? = .left,
