@@ -8,11 +8,11 @@
 
 import UIKit
 
+// 1)
 class ExampleStyle: Style {
-    override init(isStylable: Bool, isTextStylable: Bool, isPlaceholderStylable: Bool) {
-        super.init(isStylable: isStylable,
-                   isTextStylable: isTextStylable,
-                   isPlaceholderStylable: isPlaceholderStylable)
+    init() {
+        super.init(isStylable: false, isTextStylable: true, isPlaceholderStylable: false)
+        // Background Stylable
         backgroundColor = .green
         borderColor = .red
         borderWidth = 5
@@ -41,10 +41,9 @@ class ExampleStyle: Style {
 }
 
 class DefaultTextFieldHeader: Style {
-    override init(isStylable: Bool, isTextStylable: Bool, isPlaceholderStylable: Bool) {
-        super.init(isStylable: isStylable,
-                   isTextStylable: isTextStylable,
-                   isPlaceholderStylable: isPlaceholderStylable)
+    init() {
+        super.init(isStylable: false, isTextStylable: true, isPlaceholderStylable: false)
+        // Text Stylable
         font = .systemMedium
         textColor = .marine
         allignment = .left
@@ -53,11 +52,8 @@ class DefaultTextFieldHeader: Style {
 }
 
 class DefaultTextField: Style {
-    override init(isStylable: Bool, isTextStylable: Bool, isPlaceholderStylable: Bool) {
-        super.init(isStylable: isStylable,
-                   isTextStylable: isTextStylable,
-                   isPlaceholderStylable: isPlaceholderStylable)
-        
+    init() {
+        super.init(isStylable: true, isTextStylable: true, isPlaceholderStylable: true)
         // Background Stylable
         backgroundColor = .textFieldbackground
         borderColor = .textFieldBorder
@@ -83,10 +79,8 @@ class DefaultTextField: Style {
 }
 
 class ContinueButton: Style {
-    override init(isStylable: Bool, isTextStylable: Bool, isPlaceholderStylable: Bool) {
-        super.init(isStylable: isStylable,
-                   isTextStylable: isTextStylable,
-                   isPlaceholderStylable: isPlaceholderStylable)
+    init() {
+        super.init(isStylable: true, isTextStylable: true, isPlaceholderStylable: false)
         // Background Stylable
         // Set you backround style properties here
         backgroundColor = .projectOrange
@@ -102,10 +96,9 @@ class ContinueButton: Style {
 }
 
 class ShadowAndRounded: Style {
-    override init(isStylable: Bool, isTextStylable: Bool, isPlaceholderStylable: Bool) {
-        super.init(isStylable: isStylable,
-                   isTextStylable: isTextStylable,
-                   isPlaceholderStylable: isPlaceholderStylable)
+    init() {
+        super.init(isStylable: true, isTextStylable: false, isPlaceholderStylable: false)
+        // Background Stylable
         shadowColor = .gray
         shadowOffset = CGSize(width: -10, height: 10)
         shadowOpacity = 0.2

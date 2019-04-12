@@ -10,7 +10,7 @@ import UIKit
 
 // Define your styles below
 enum StyleType: String {
-    // 1)
+    // 2)
     case exampleStyle
     
     case defaultTextFieldHeader
@@ -21,28 +21,13 @@ enum StyleType: String {
     
     // Define you styles here
     var style: Style {
-        // 2)
+        // 3)
         switch self {
-        case .exampleStyle:
-            return ExampleStyle(isStylable: false,
-                                isTextStylable: true,
-                                isPlaceholderStylable: false)
-        case .defaultTextFieldHeader:
-            return DefaultTextFieldHeader(isStylable: false,
-                                          isTextStylable: true,
-                                          isPlaceholderStylable: false)
-        case .defaultTextField:
-            return DefaultTextField(isStylable: true,
-                                    isTextStylable: true,
-                                    isPlaceholderStylable: true)
-        case .continueButton:
-            return ContinueButton(isStylable: true,
-                                  isTextStylable: true,
-                                  isPlaceholderStylable: false)
-        case .shadowAndRounded:
-            return ShadowAndRounded(isStylable: true,
-                                    isTextStylable: false,
-                                    isPlaceholderStylable: false)
+        case .exampleStyle:             return ExampleStyle()
+        case .defaultTextFieldHeader:   return DefaultTextFieldHeader()
+        case .defaultTextField:         return DefaultTextField()
+        case .continueButton:           return ContinueButton()
+        case .shadowAndRounded:         return ShadowAndRounded()
         }
     }
 }
